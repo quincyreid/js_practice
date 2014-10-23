@@ -11,7 +11,13 @@ var Team = function(name, mascot){
   // Remove person from team
   this.removePerson = function(name){
     for(i=0; i<this.roster.length; i++){
-      console.log(this.roster[i]);
+      // console.log(this.roster[i].name);
+      if (name == this.roster[i].name){
+      //  console.log(this.roster[i].name);
+
+        this.roster.splice(i, 1);
+      }
+
     }
   }
 }
@@ -36,8 +42,14 @@ var D = new Person(
   'male'
 );
 
+var Jessie = new Person(
+  'Jessie',
+  'male'
+);
+
 QTeam.addPerson(Q);
 QTeam.addPerson(D);
-QTeam.removePerson(Q);
+QTeam.addPerson(Jessie);
+QTeam.removePerson('Q');
 
-// console.log(QTeam);
+console.log(QTeam);
