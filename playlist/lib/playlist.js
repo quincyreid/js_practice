@@ -1,14 +1,6 @@
-var Playlist = function(name, songs) {
+var Playlist = function(name) {
   this.name = name;
-  this.songs = songs;
-
-
-  // Function for listing songs from the playlist
-  this.listSongs = function() {
-    for (var i = 0; i<this.songs.length; i++) {
-      console.log((i+1) + '. ' + this.songs[i]);
-    }
-  }
+  this.songs = [];
 
   // Function for adding a song to the playlist
   this.addSong = function(song) {
@@ -26,7 +18,7 @@ var Playlist = function(name, songs) {
     else {
       var song = this.songs.shift();
     }
-    console.log('Now Playing: ' + song);
+    return song;
   }
 };
 
