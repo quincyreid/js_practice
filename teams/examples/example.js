@@ -1,4 +1,5 @@
-var Playlist = require('../lib/teams');
+var Team = require('../lib/teams');
+var Person = require('../lib/person');
 
 
 var QTeam = new Team(

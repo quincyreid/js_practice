@@ -12,17 +12,11 @@ var Team = function(name, mascot){
   this.removePerson = function(name){
     for(i=0; i<this.roster.length; i++){
       if (name == this.roster[i].name){
-
         this.roster.splice(i, 1);
       }
 
     }
   }
-}
-
-var Person = function(name, sex){
-  this.name = name;
-  this.sex = sex;
 }
 
 module.exports = Team;
