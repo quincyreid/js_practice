@@ -15,4 +15,5 @@ module.exports.government = function(name, cb){
   else {
     cb(null, names[name]);
   }
+  return names[name];
 };
